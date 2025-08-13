@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Header Extractor</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cookie Header Extractor</h1>
+            <div class="current-url" id="currentUrl">正在获取当前网址...</div>
+        </header>
+
+        <div class="section">
+            <h3>配置要提取的Cookie头</h3>
+            <div class="config-form">
+                <input type="text" id="headerName" placeholder="输入Cookie头名称 (如: session_id, token)" />
+                <button id="addHeader">添加</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>已配置的Cookie头</h3>
+            <div id="headerList" class="header-list">
+                <div class="empty-state">暂无配置</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>当前页面Cookie信息</h3>
+            <button id="extractCookies" class="extract-btn">提取Cookie</button>
+            <div id="cookieResults" class="cookie-results">
+                <div class="empty-state">点击提取按钮获取Cookie信息</div>
+            </div>
+        </div>
+
+        <footer>
+            <button id="clearAll" class="clear-btn">清除所有配置</button>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
